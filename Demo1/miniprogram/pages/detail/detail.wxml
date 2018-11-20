@@ -1,0 +1,18 @@
+<!-- map.wxml -->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" markers="{{markers}}" show-location show-compass scale='{{scale}}'>
+  <cover-view>
+    <cover-image src='../../images/detail/my_location.png' class='img_mylocation' bindtap='toMyLocation'></cover-image>
+  </cover-view>
+  <cover-view class="pro-img">
+    <cover-image src="../../images/detail/arrow_up.png" class="down" bindtap='toDownLocation'></cover-image>
+    <cover-image src="../../images/detail/arrow_down.png" class="up" bindtap='toUpLocation'></cover-image>
+  </cover-view>
+</map>
+<view>
+  <view class="pro-desc">
+    在组件上使用 wx:for 控制属性绑定一个数组，即可使用数组中各项的数据重复渲染该组件。 默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item
+  </view>
+  <view class="picList" wx:for="{{picList}}">
+    <image src="{{item.pic}}" class="pic_list"></image>
+  </view>
+</view>
